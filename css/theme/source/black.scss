@@ -86,12 +86,12 @@ h6 {
     }
 
     &.slide {
-        background: url("/img/rectangles.svg") center center no-repeat;
+        background: url("../../img/rectangles.svg") center center no-repeat;
     }
     .slide-background {
         &.intro,
         &.ending {
-            background: url("/img/shape.svg") center center no-repeat;
+            background: url("../../img/shape.svg") center center no-repeat;
             background-size: 70%;
         }
         &.question-anwser {
@@ -182,7 +182,7 @@ h6 {
             &::before {
                 content: "";
                 position: absolute;
-                background: url("/img/circle.png");
+                background: url("../../img/circle.png");
                 top: 50%;
                 left: -50px;
                 transform: translateY(-50%) scale(0.5);
