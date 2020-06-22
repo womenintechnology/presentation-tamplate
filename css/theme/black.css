@@ -104,17 +104,18 @@ h6 {
 .reveal .center {
   text-align: center; }
 
-.reveal a.btn {
+.reveal .slides .btn {
   color: white;
   font-weight: 800;
   padding: 10px;
   margin: 30px auto 0;
   display: block;
   width: 140px;
+  text-decoration: none;
   border: 2px solid #ff9999;
   border-radius: 5px;
   transition: background-color 0.5s ease; }
-  .reveal a.btn:hover {
+  .reveal .slides .btn:hover {
     border: 2px solid #ff9999;
     background-color: #cc9999;
     color: white; }
