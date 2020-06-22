@@ -152,7 +152,7 @@ body {
     &::after {
         position: absolute;
         font-size: 82px;
-        color: $geraldine-pink;
+        color: $color-geraldine-pink;
     }
     &::before {
         content: "\201C";
@@ -181,7 +181,7 @@ body {
 .reveal pre {
     display: block;
     position: relative;
-    width: 90%;
+    width: 100%;
     margin: $blockMargin auto;
 
     text-align: left;

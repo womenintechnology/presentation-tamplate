@@ -13,18 +13,61 @@ section.has-light-background h5,
 section.has-light-background h6 {
   color: #222; }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: left; }
+
 .reveal .intro h1 {
   padding-top: 250px;
   font-style: italic;
   letter-spacing: 0.06em;
-  margin-bottom: 5px; }
+  margin-bottom: 5px;
+  text-align: center; }
+
+.reveal .self-into h2 {
+  text-align: center; }
+
+.reveal .desc h1,
+.reveal .desc h2 {
+  text-align: center; }
+
+.reveal .ending h2 {
+  padding-top: 220px; }
+
+.reveal .ending small {
+  display: block; }
 
 .reveal.slide {
   background: url("/img/rectangles.svg") center center no-repeat; }
 
-.reveal .slide-background.intro {
+.reveal .slide-background.intro, .reveal .slide-background.ending {
   background: url("/img/shape.svg") center center no-repeat;
   background-size: 70%; }
+
+.reveal .slide-background.question-anwser::after, .reveal .slide-background.question-anwser::before {
+  content: "?";
+  font-size: 800px;
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: right;
+  color: #cc9999;
+  opacity: 0.1;
+  padding: 0 10%; }
+
+.reveal .slide-background.question-anwser::after {
+  content: "?";
+  text-align: right;
+  transform: scaleX(-1) translateY(-50%); }
+
+.reveal .slide-background.question-anwser::before {
+  content: "?"; }
 
 .reveal .flex {
   display: flex; }
@@ -60,6 +103,50 @@ section.has-light-background h6 {
 
 .reveal .center {
   text-align: center; }
+
+.reveal .btn {
+  color: white;
+  font-weight: 800;
+  padding: 10px;
+  margin: 30px auto 0;
+  display: block;
+  width: 140px;
+  border: 2px solid #ff9999;
+  border-radius: 5px;
+  transition: background-color 0.5s ease; }
+  .reveal .btn:hover {
+    border: 2px solid #ff9999;
+    background-color: #cc9999;
+    color: white; }
+
+.reveal ul li {
+  list-style-type: none;
+  position: relative; }
+  .reveal ul li::before {
+    content: "";
+    position: absolute;
+    background: url("/img/circle.png");
+    top: 50%;
+    left: -50px;
+    transform: translateY(-50%) scale(0.5);
+    width: 28px;
+    height: 28px; }
+
+.reveal ol {
+  counter-reset: num; }
+  .reveal ol li {
+    list-style-type: none;
+    counter-increment: num; }
+    .reveal ol li::before {
+      content: counter(num) ".";
+      margin-right: 20px;
+      color: #ffcccc; }
+
+.reveal .slides a {
+  color: #ff9999;
+  text-decoration: underline; }
+  .reveal .slides a:hover {
+    color: #cc9999; }
 
 /*********************************************
  * GLOBAL STYLES
@@ -210,7 +297,7 @@ body {
 .reveal pre {
   display: block;
   position: relative;
-  width: 90%;
+  width: 100%;
   margin: 20px auto;
   text-align: left;
   font-size: 0.55em;
