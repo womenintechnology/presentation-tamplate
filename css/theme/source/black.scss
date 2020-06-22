@@ -4,16 +4,13 @@
  * By Hakim El Hattab, http://hakim.se
  */
 
-
 // Default mixins and settings -----------------
 @import "../template/mixins";
 @import "../template/settings";
 // ---------------------------------------------
 
-
 // Include theme-specific fonts
 @import url(../../lib/font/source-sans-pro/source-sans-pro.css);
-
 
 // Override theme settings (see ../template/settings.scss)
 $backgroundColor: #191919;
@@ -22,27 +19,92 @@ $mainColor: #fff;
 $headingColor: #fff;
 
 $mainFontSize: 42px;
-$mainFont: 'Source Sans Pro', Helvetica, sans-serif;
-$headingFont: 'Source Sans Pro', Helvetica, sans-serif;
+$mainFont: "Lato", Helvetica, sans-serif;
+$headingFont: "Lato Black", Helvetica, sans-serif;
 $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: uppercase;
 $headingFontWeight: 600;
 $linkColor: #42affa;
-$linkColorHover: lighten( $linkColor, 15% );
-$selectionBackgroundColor: lighten( $linkColor, 25% );
+$linkColorHover: lighten($linkColor, 15%);
+$selectionBackgroundColor: lighten($linkColor, 25%);
 
 $heading1Size: 2.5em;
 $heading2Size: 1.6em;
 $heading3Size: 1.3em;
-$heading4Size: 1.0em;
+$heading4Size: 1em;
 
 section.has-light-background {
-	&, h1, h2, h3, h4, h5, h6 {
-		color: #222;
-	}
+    &,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: #222;
+    }
 }
 
+.reveal {
+    .intro {
+        h1 {
+            padding-top: 250px;
+            font-style: italic;
+            letter-spacing: 0.06em;
+            margin-bottom: 5px;
+        }
+    }
+    &.slide {
+        background: url("/img/rectangles.svg") center center no-repeat;
+    }
+    .slide-background {
+        &.intro {
+            background: url("/img/shape.svg") center center no-repeat;
+            background-size: 70%;
+        }
+    }
+    .flex {
+        display: flex;
+        &.center {
+            justify-content: center;
+            .self-center {
+                align-self: center;
+            }
+        }
+    }
+    .italic {
+        font-style: italic;
+    }
+    .biography {
+        display: flex;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.05);
+        .item {
+            align-self: center;
+            min-width: 30%;
+            &_img {
+                width: 70%;
+            }
+            &_text {
+                text-align: left;
+                font-size: 30px;
+            }
+        }
+    }
+    .light-pink-text {
+        color: $light-pink;
+    }
+    .dark-pink-text {
+        color: $geraldine-pink;
+    }
+    .upper {
+        text-transform: uppercase;
+    }
+    .center {
+        text-align: center;
+    }
+}
 
 // Theme template ------------------------------
 @import "../template/theme";

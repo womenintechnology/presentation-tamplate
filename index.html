@@ -1,50 +1,91 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+	<title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/monokai.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section class="intro">
+				<h1>NO ONE <br>CAN STOP US!</h1>
+				<img class="img-medium" src="img/logo_WIT_biel.png">
+			</section>
+			<section class="desc">
+				<h2>Full-Stack Bootcamp</h2>
+				<p class="light-pink-text center">Wstęp do języka PHP.</p>
+				<div class="flex center">
+					<small class="italic self-center">Power by</small>
+					<img class="img-medium" src="img/logo_WIT_biel.png">
+				</div>
+			</section>
+			<section class="self-into">
+				<h2>Back-end developer</h2>
+
+				<div class="biography">
+					<div class="item">
+						<img class="item_img" src="img/person.png">
+					</div>
+					<div class="item">
+						<blockquote>
+							<p class="item_text">Brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog.
+								Junk MTV quiz graced by fox whelps. Bawds jog,
+								flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs grab
+								quick-jived waltz. Brick quiz whangs jumpy veldt fox.
+								Bright vixens jump; dozy fowl quack. Quick wafting zephyrs vex bold Jim.
+							</p>
+						</blockquote>
+					</div>
+				</div>
+			</section>
+			<section class="definition">
+				<h2 class="dark-pink-text">Brown fox</h2>
+				<p class="center">Jumps over a lazy dog. DJs flock by when MTV ax
+					quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog,
+					flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs grab
+					quick-jived waltz. Brick quiz whangs jumpy veldt fox.
+					Bright vixens jump; dozy fowl quack. Quick wafting zephyrs vex bold Jim.
+				</p>
+			</section>
 		</div>
+	</div>
 
-		<script src="js/reveal.js"></script>
+	<script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				hash: true,
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/highlight/highlight.js' },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
-			});
-		</script>
-	</body>
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			hash: true,
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/highlight/highlight.js' },
+				{ src: 'plugin/notes/notes.js', async: true }
+			]
+		});
+	</script>
+</body>
+
 </html>
