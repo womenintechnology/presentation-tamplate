@@ -94,7 +94,7 @@
           </ul>
         </section>
         <section class="list">
-          <h3 class="light-pink-text">Agenda: Comon SCC cases</h3>
+          <h3 class="light-pink-text">Agenda: Common SCC cases</h3>
           <ul>
             <li>Styling Data Table</li>
             <li>Styling Form</li>
@@ -120,17 +120,17 @@
           />
         </section>
         <section class="definition">
-          <h2 class="dark-pink-text">CSS Essentials: HTML and CSS purpose</h2>
+          <h2 class="dark-pink-text">HTML and CSS purpose</h2>
           <ul>
             <li class="fragment">
-              HTML - definiuje jaka jest struktura i zawartość
+              HTML - define what is a structure and content
             </li>
             <li class="fragment">
-              CSS - definiuje jak coś wygląda, jak ma się prezentować
+              CSS - define how something should look like
               <a
                 href="https://medium.mybridge.co/26-impressive-web-projects-built-with-css-only-4a4c2f773a21"
               >
-                inspiracja
+                inspiration
               </a>
             </li>
           </ul>
@@ -143,7 +143,7 @@
         </section>
         <section class="definition">
           <h2 class="dark-pink-text">
-            CSS Essentials: How to add CSS style to a page?
+            How to add CSS style to a page?
           </h2>
           <ul>
             <li>
@@ -164,7 +164,7 @@
           </ul>
         </section>
         <section class="definition">
-          <h2 class="dark-pink-text">CSS Essentials: CSS syntax</h2>
+          <h2 class="dark-pink-text">CSS syntax</h2>
           <ul>
             <li>
               CSS rule
@@ -192,8 +192,8 @@
             </li>
             <li>
               Descendant (div a {}): more appropriate selector. We can specify
-              elements, or its group by specified how they are nested. Opisanie
-              potomstwa i rodzica elementów
+              elements, or its group by specified how they are nested - parent
+              and children relations.
             </li>
             <li>
               Class: specified attributes. Reuse same style in many places.
@@ -204,8 +204,8 @@
           <h2 class="dark-pink-text">cd. CSS Selectors</h2>
           <ul>
             <li>
-              Mix descendant and class selectors - w zależności gdzie dany
-              element się znajduje możemy go stylować w różny sposób;
+              Mix descendant and class selectors - depend from where some
+              element exist in html structure we can styled it in deferent ways.
               <pre><code class="hljs css" data-trim data-line-numbers="2-4">
 						p {color: orange}
 						footer {color: green}
@@ -215,9 +215,9 @@
           </ul>
         </section>
         <section class="definition">
-          <h2 class="dark-pink-text">cd. CSS Selectors: remember</h2>
+          <h2 class="dark-pink-text">Remember</h2>
           <p>
-            descendent selectors are more specific, deeped elements are more
+            descendent selectors are more specific, descendent elements are more
             specified; class are more specific than descendant; class with
             descendant are more specific than class. if element have two rules
             with same specifically then the order of the rule are count.
@@ -236,9 +236,9 @@
               about it later).
             </li>
             <li>
-              Specificity: specyficzność. Obliczanie specyficzności, aby
-              określić, która reguła dla jednego elementu wygrywa i będzie go
-              stylować.
+              Specificity [specyficzność]: We can counting specificity for find
+              out which rules are attached to some element and influence how it
+              look like.
             </li>
           </ul>
         </section>
@@ -300,7 +300,7 @@
         </section>
         <section class="code">
           <h3 class="light-pink-text">
-            How to control total width
+            How to control total width and height?
           </h3>
           <pre><code class="hljs css" data-trim data-line-numbers="1-4">
 					box-a {
@@ -311,7 +311,7 @@
         </section>
         <section class="code">
           <h3 class="light-pink-text">
-            Compare widths
+            Compare total widths
           </h3>
 
           <pre><code class="hljs css" data-trim data-line-numbers="1-10">
@@ -361,7 +361,7 @@
         <section class="desc">
           <h2 class="dark-pink-text">Something is wrong?</h2>
           <p class="fragment light-pink-text center">
-			Why is box-b not the same size as box-b?
+            Why is box-b not the same size as box-b?
           </p>
           <div class="flex center">
             <img
@@ -374,7 +374,7 @@
         <section class="desc">
           <h2 class="dark-pink-text">Solution</h2>
           <p class="fragment light-pink-text center">
-            Use box-sizing propertis in universal selector to control width and
+            Use box-sizing properties in universal selector to control width and
             height of box
           </p>
 
@@ -392,7 +392,10 @@
 						* {
 							box-sizing: border-box 
 						}						 
-				</code></pre>
+        </code></pre>
+            <p class="fragment">
+              Box-sizing doesn’t count a margin properties!
+            </p>
           </div>
         </section>
 
@@ -405,7 +408,7 @@
           <div class="flex center">
             <ul>
               <li class="fragment">
-                Now elements take all available place in theirs width.
+                Now 'div' elements take all available place in theirs width.
               </li>
               <li class="fragment">Position them in columns with Float.</li>
               <li class="fragment">What is Float?</li>
@@ -416,10 +419,10 @@
         <section class="desc">
           <h2 class="dark-pink-text">Float: how to use it</h2>
           <p class="fragment">
-            Float positions boxes side by side to create columns.
+            Float positiona boxes side by side to create columns.
           </p>
           <p class="light-pink-text">
-            HTML structure: parent element with childrens
+            HTML structure: parent element with children
           </p>
           <pre><code class="hljs html" data-trim data-line-numbers="1-10">
 					<div class="container clearfix">
@@ -432,11 +435,10 @@
 
         <section class="desc">
           <p class="light-pink-text center">
-            CSS rules float: left / right / etc.
+            CSS rules float
           </p>
           <div class="flex">
-            <pre>
-				css
+            <pre>css
 				<code class="hljs css" data-trim data-line-numbers="1-16">
 				.container {
 					max-width: 940px;
@@ -450,11 +452,10 @@
 				 }
 				 .sidebar {
 					width: 40%;
-					float left;
+					float: left;
 				 }			 
 				</code></pre>
-            <pre>
-				html
+            <pre>html
 				<code class="hljs html" data-trim data-line-numbers="1-10">
 				<div class="container clearfix">
 					<div class="main-area"></div>
@@ -466,7 +467,7 @@
         </section>
         <section class="code">
           <p>
-            Clearfix set benife the two floated box is bad practice
+            Clearfix set below the two floated box is bad practice
           </p>
 
           <div class="flex">
@@ -506,10 +507,189 @@
           <p>
             Box need to be independent and clear float by it selfs and not relay
             on some other clearfix below. Parent element doesn’t see floated
-            childrens. On the end of children should be cleared by property
+            children. On the end of children should be cleared by property
             clearfix {clear: both}. Better solution is to set clearfix as a
             separated class
           </p>
+        </section>
+        <section class="definition">
+          <h2 class="dark-pink-text center">To sum up</h2>
+          <ul>
+            <li>Types of selectors</li>
+            <li>Box Model</li>
+            <li>Control size of box</li>
+            <li>Properties box-sizing</li>
+            <li>Create page layout with float property</li>
+            <li>Clearfix</li>
+          </ul>
+        </section>
+
+        <section class="definition">
+          <h2 class="dark-pink-text center">
+            Coding time!
+          </h2>
+          <img
+            src="img/5e39e5df-3cad-49a0-ba1f-b78015b54bd8.png"
+            alt="home page"
+            width="700"
+          />
+        </section>
+
+        <section class="definition">
+          <h2 class="dark-pink-text center">Intermediate CSS</h2>
+          <ul>
+            <li>Style navigation</li>
+            <li>Overlapping effect</li>
+            <li>Color units</li>
+            <li>Background transparency</li>
+          </ul>
+        </section>
+
+        <section class="definition">
+          <h2 class="dark-pink-text center">Styling navigation</h2>
+          <h3 class="light-pink-text">Tasks to do:</h3>
+          <p>1. In HTML set navigation structure with unordered list</p>
+          <pre><code class="hljs html" data-trim data-line-numbers="1-20">
+                <ul class="site-nav clearfix">
+                  <li>Home</li>
+                  <li>Blog</li>
+                  <li>About us</li>
+                  <li>Contact</li>
+                </ul>
+              </code></pre>
+        </section>
+        <section class="definition">
+          <p>2. Remove default style from ul and li</p>
+          <pre><code class="hljs css" data-trim data-line-numbers="1-20">
+              ul {
+                  padding: 0;
+                  margin: 0;
+               }   
+              li {
+                list-style: none;
+                float: left;
+              }
+              a {
+                text-decoration: none;
+              }    
+              </code></pre>
+        </section>
+        <section class="definition">
+          <p>3. In CSS file set rest navigation (list) css styles</p>
+          <pre><code class="hljs css" data-trim data-line-numbers="1-20">
+            .site-nav {
+               margin-top: 20px;
+            }
+            
+            .site-nav a { 
+              display: block;
+               color: green;
+               text-decoration: none;
+               padding: 5px;
+               border: 3px solid black;
+            }
+
+            .site-nav a:hover {
+               background-color: blue;
+            }             
+              </code></pre>
+        </section>
+        <section class="definition">
+          <h2 class="dark-pink-text center">
+            Overlapping effects with positioning properties
+          </h2>
+          <p>
+            Positioning your elements (boxes), so they can lay on each other. We
+            will talk about position property with relative and absolute value.
+          </p>
+        </section>
+        <section class="definition">
+          <h3 class="light-pink-text">Positioning</h3>
+          <ul>
+            <li class="fragment">
+              position absolute: position element without conjunction with the
+              rest elements, only with the parents with position relative. If
+              there is no one, the absolute position is conjunction with view
+              screen.
+            </li>
+            <li class="fragment">
+              battle of overlapping: z-index. If few elements have a position
+              relatives, and they will be overlapping on each other, then we can
+              decide which one should be on top by using z-index property with
+              any negative or positive values: z-index: 1; or z-index: -1;
+            </li>
+          </ul>
+        </section>
+        <section class="definition">
+          <h2 class="dark-pink-text center">Color units</h2>
+          <ul>
+            <li>Hexadecimal RGB</li>
+            <li>RGB</li>
+            <li>RGBA</li>
+            <li class="fragment">May be is more?</li>
+          </ul>
+        </section>
+        <section class="definition">
+          <h3 class="light-pink-text center">Hexadecimal</h3>
+          <p>
+            Hexadecimal RGB value: Six value from 0 - 9 and a - f. Each pair
+            represent a variation of colors: red; green; blue with 256
+            combination (16 * 16 = 256);
+          </p>
+          <p>Example HEX</p>
+          <div style="background-color: #ff9999; text-align: center;">
+            <span>#ff9999</span>
+          </div>
+        </section>
+        <section class="definition">
+          <h3 class="light-pink-text center">RGB &amp; RGBA</h3>
+          <p>
+            RGB &amp; RGBA: red-green-blue /-alpha: value for each color in
+            notation of 255. “A” value is for transparency from 0 to 1.
+          </p>
+          <p>Example RGB</p>
+          <div
+            style="background-color: rgb(255, 153, 153); text-align: center;"
+          >
+            <span>rgb(255, 153, 153)</span>
+          </div>
+          <p>Example RGBA</p>
+          <div
+            style="
+              background-color: rgb(255, 153, 153, 0.6);
+              text-align: center;
+            "
+          >
+            <span>rgba(255, 153, 153, .5)</span>
+          </div>
+        </section>
+
+        <section class="definition">
+          <h2 class="light-pink-text center">Background transparency</h2>
+          <ul>
+            <li class="fragment">
+              What is it?
+              <div
+                class="fragment"
+                style="
+                  background-color: rgba(255, 99, 71, 0.5);
+                  text-align: center;
+                  padding: 10% 0;
+                "
+              >
+                <span>
+                  div { background-color: rgba(255, 99, 71, 0.5); }
+                </span>
+              </div>
+            </li>
+
+            <li class="fragment">
+              How to set background transparency?
+              <p class="fragment light-pink-text">
+                Use rgba and set alpha value in background-color property.
+              </p>
+            </li>
+          </ul>
         </section>
 
         <section class="code">
