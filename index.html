@@ -692,6 +692,141 @@
           </ul>
         </section>
 
+        <section class="definition">
+          <h2 class="dark-pink-text center">Necessary Tasks</h2>
+          <ul>
+            <li>Styling Table</li>
+            <li>Styling Form</li>
+            <li>Set Topography</li>
+            <li>Use Developer Tools</li>
+            <li>Styled Background</li>
+            <li>Set Full Width Backgrounds</li>
+            <li>Create Responsive Web Design</li>
+          </ul>
+        </section>
+
+        <section class="definition">
+          <h2 class="dark-pink-text center">Styling Table</h2>
+          <pre><code class="hljs html" data-trim data-line-numbers="1-12">
+            <table class="tab-1">
+              <thead>
+                <tr>
+                  <th class="header-1">Name</th>
+            
+                  <th class="header-2">Date</th>
+                  <th class="header-3">Age</th>
+               </tr>
+             </thead>
+             <tbody>
+               <tr>
+                 <td>Ania</td>
+                 <td>01.02.2020</td>
+                 <td>10</td>
+               </tr>
+               <tr>
+                 <td>Hania</td>
+                 <td>01.03.2020</td>
+                 <td>5</td>
+               </tr>
+               <tr>
+                 <td>Basia</td>
+                 <td>01.12.2020</td>
+                 <td>9</td>
+               </tr>
+             </tbody>
+               
+            </table>
+          </code></pre>
+          <a href="https://codepen.io/jola95/pen/LYGKRyg?editors=1100">Codepan for Table demo</a>
+        </section>
+        <section class="definition">
+          <h2 class="light-pink-text center">Styling Table - Tasks</h2>
+          <p>Rewrite default table style by select table elements:</p>
+          <ul>
+            <li>Cells should stay next to each other</li>
+            <li>Set single border</li>
+            <li>Use full available horizontal space</li>
+          </ul>
+          <pre><code class="hljs css" data-trim data-line-numbers="1-20">
+            table {
+              border-spacing: 0; 
+              border-collapse: collapse;
+              width: 100%;
+           }
+          </code></pre>
+        </section>
+        <section class="definition">
+          <p>Styling Table content</p>
+          <ul>
+            <li>Title of the columns set to on left side</li>
+            <li>Set border</li>
+            <li>Set space inside cells</li>
+            <li>Set all text in same line</li>
+          </ul>
+          <pre><code class="hljs css" data-trim data-line-numbers="1-20">
+            table th {
+              text-align: left;
+           }           
+            table tr,
+            table td {
+              border: 1px solid black;
+              padding: 10px;
+              vertical-align: top;
+            }
+          </code></pre>
+        </section>
+        <section class="definition">
+          <p>Styling Table headers / row / columns</p>
+          <ul>
+            <li>Set color blue for odd row</li>
+            <li>Control width of columns</li>
+            <li>Set text in last two column center</li>
+          </ul>
+          <pre><code class="hljs css" data-trim data-line-numbers="1-20">
+            table  tbody tr:nth-child(odd) td {
+              background-color:blue;
+           }  
+            
+           .header-1 { width: 60px; }
+           .header-2 { width: 30px; }
+           .header-3 { width: 30px; }
+
+           table tr :nth-child(2),
+           table tr :nth-child(3) {
+             text-align: center;
+            }
+          </code></pre>
+        </section>
+        <section class="definition">
+          <h2 class="dark-pink-text center">Styling Form</h2>
+          <pre><code class="hljs html" data-trim data-line-numbers="1-12">
+            <form>
+              <label for="name" class="hide-label">Name</label>
+              <input id="name" placeholder="Your name" type="text" name="Name">
+              <label for="email" class="hide-label">Email</label>
+              <input id="email" placeholder="Your email" type="email" name="Email">
+              <label for="password" class="hide-label">Password</label>
+              <input id="password" placeholder="Your password" type="password" name="Password" class"hide-label">
+              <select>
+                  <option value="profile">My personal profile</option>
+                  <option value="office">My office</option>
+                  <option value="setting">Account setting</option>
+              </select>
+              <label>
+                  <input type="checkbox" checked="true" value="yes">
+                  <span class="checkout-text">Stay sign in</span>
+              </label>
+             
+              <input type="submit" value="Submit">
+          </form>
+          </code></pre>
+          <a href="https://codepen.io/jola95/pen/GRobjqb">codepan with form</a>
+        </section>
+        <section class="definition">
+          <h2 class="dark-pink-text center">Set Topography</h2>
+        </section>
+
+
         <section class="code">
           <h3 class="light-pink-text">Brown fox</h3>
           <pre><code class="hljs html" data-trim data-line-numbers="2-4">
