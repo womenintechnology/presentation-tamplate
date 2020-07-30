@@ -737,7 +737,9 @@
                
             </table>
           </code></pre>
-          <a href="https://codepen.io/jola95/pen/LYGKRyg?editors=1100">Codepan for Table demo</a>
+          <a href="https://codepen.io/jola95/pen/LYGKRyg?editors=1100">
+            Codepan for Table demo
+          </a>
         </section>
         <section class="definition">
           <h2 class="light-pink-text center">Styling Table - Tasks</h2>
@@ -823,34 +825,205 @@
           <a href="https://codepen.io/jola95/pen/GRobjqb">codepan with form</a>
         </section>
         <section class="definition">
-          <h2 class="dark-pink-text center">Set Topography</h2>
+          <h2 class="dark-pink-text center">CSS Topography</h2>
+          <pre><code class="hljs css" data-trim data-line-numbers="1-12">
+            body {
+              font-size: 5%; /* other units: %, px, rem, em, keywords (small, medium, big); set in baseline in body element - all elements have base font size set in one place */
+            
+              font-family: Lato, Helvetica sans-serif; /* set in body element (root element on the page). Contain names of font installed in someone devices [Lato, Helvetica] + keywords “sans-serif”. First on the font name list is checked if it is available, if not, then browser will take second. If no one are available then browser take key word and font type is from browser system */
+            }
+          </code></pre>
+        </section>
+        <section class="definition">
+          <h3 class="light-pink-text">cd. Topography</h3>
+          <pre><code class="hljs css" data-trim data-line-numbers="1-16">
+            h1, h2, h3, h4, h5, h6, p, span, a {
+              font-size: 5rem;
+              font-weight: bold; /* normal etc. */
+              font-style: italic; /* normal etc. */
+              letter-spacing: 5px; /* set space between letters */
+              word-spacing: 5px; /* set space between word */
+              text-shadow: h-shadow v-shadow blur-radius color|none|initial|inherit; 
+              text-shadow: 2px 2px 2px #ff0000;
+              text-transform: uppercase; /* capitalize/ lowercase/ normal */  
+              text-decoration: underline; /* none; Be aware! underlining mean that something is a link. But we can remove underlining from 'a' element by setting rule: a { text-decoration: none} */
+              /* paragraphs */
+              text-align: right; /* left/center/justify: default value for paragraph is left side */
+              text-indent: 5px; /* space for margin. We can use it on any element, not just paragraph */
+              line-height: 1.5; /* space between lines’ of text. The unit is just number. It is good practice to set baseline for line-height in body elements. */
+            }
+          </code></pre>
+        </section>
+
+        <section class="definition">
+          <h2 class="dark-pink-text center">Developer Tools</h2>
+          <div class="item">
+            <blockquote>
+              <p class="item_text">
+                Developer tools (or "development tools" or short "DevTools") are programs that allow a developer to create, test and debug software. <a href="https://developer.mozilla.org/en-US/docs/Glossary/Developer_Tools">MDN web doc</a>
+              </p>
+            </blockquote>
+          </div>
+        </section>
+        <section class="definition">
+          <h3 class="light-pink-text">How to use Inspector Elements?</h3>
+          <img src="img/Screen Shot 2020-07-30 at 13.04.08.png" alt="developer tools">
+        </section>
+        <section class="definition">
+          <ul>
+            <li>Go to the browser.</li>
+            <li>Click on keyboard alt+ctrl+i or  on mack cmd+i.</li>
+            <li>View of the developer tools deepened from the browser. On Firefox it can looks different from Chrome.</li>
+          </ul>
+        </section>
+        <section class="definition">
+          <h3 class="light-pink-text">CD.</h3>
+          <ul>
+            <li>On left side is html structure.</li>
+            <li>On right side are all rules of style attached to inspect element</li>
+            <li>we can customizing all elements on our side in browser in real time.</li>
+            <li>Changes aren’t permanent.</li>
+            <li>Developer tool tells us where this rules are located in files.</li>
+          </ul>
+        </section>
+        <section class="definition">
+          <h3 class="light-pink-text">CD.</h3>
+          <ul>
+            <li>Developer tool is useful because of:</li>
+            <ul>
+              <li>tracking down where properties’ rules come from</li>
+              <li>experimenting or problem shooting</li>
+              <li>inspiration from other website.</li>
+            </ul>
+          </ul>
+          <p class="fragment">can I edit a html structure in developer tools?</p>
+        </section>
+
+        <section class="definition">
+          <h2 class="dark-pink-text center">CSS Background</h2>
+          <p>How to add a image on the background of our page?</p>
+          <pre><code class="hljs css" data-trim data-line-numbers="1-12">
+            .container {
+              background-image: url(/path to our picture);
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+
+              background: #c2bbb1 url(path) center center no-repeat cover;
+
+              background: url(path) left top repeat-x, #c2bbb1 url(path) 
+              left bottom repeat-x; 
+           }   
+          </code></pre>
+        </section>
+
+        <section class="definition">
+          <h2 class="dark-pink-text center">Responsive Web Design</h2>
+          <p>Elements on the page try to fit to the width of device's screen. It is much more usable (UX) for users. 
+          </p>
+          <p>Two ingredients:</p>
+          <ul>
+            <li>Meta tags in 'head' section in out html</li>
+            <li>Media Queries (conditional CSS): it is a way to say out css how to act on specific size of user’s screen.</li>
+          </ul>
+        </section>
+        <section class="definition">
+          <h3 class="light-pink-text center">Meta tags</h3>
+          <pre><code class="hljs html" data-trim data-line-numbers="1-12">
+            <html>
+              <head>
+                <meta 
+                name="viewport" 
+                content="width=device-width, initial-scale=1"
+                >
+              </head>
+          </code></pre>
+          <ul>
+            <li>name=”viewport”: It refer to web browser's window area, which is screen of user’s devises.</li>
+            <li>content=”width=device-width, initial-scale=1”: We want the browser window to function at the actual screen width and to be truthful, not pretend to be larger.
+            </li>
+          </ul>
+        </section>
+        <section class="definition">
+          <h3 class="light-pink-text">These tags tell the device browser that it does not have to conform to the site's CSS rules. The site needs to be responsive and adaptable to the size of the device.</h3>
+        </section>
+        <section class="definition">
+          <h2 class="light-pink-text center">Media Queries</h2>
+          <pre><code class="hljs css" data-trim data-line-numbers="1-12">
+            @media screen and (max-width: 340px) {
+              .container {
+                  margin: 0 -20rem;
+                  padding: 2rem 20.5rem;
+              }
+           }
+          </code></pre>
+          <p>Media Queries are conditional css, what gives as opportunity to set style to specific viewport width.</p>
+        </section>
+        <section class="definition">
+          <h2 class="dark-pink-text center">Responsive Design Methodology</h2>
+          <ul>
+            <li>Mobile first: start from styling for mobile, and for bigger sizes use media query min-width</li>
+            <li>Desktop first: start from styling desktop, then smaller screen like mobile or tablet with max-width attributes in media query</li>
+          </ul>
+        </section>
+        <section class="definition">
+          <h2 class="light-pink-text center">Responsive Grids</h2>
+          <h3 class="center">What is grid? We use it to create a page layout so that it looks good and is balanced. The most popular grid has 12 columns</p>
+        </section>
+        <section class="definition">
+          <img src="img/12-column.jpg" alt="grid structure" width="750">
+          <p>pink color: column; white color: gutter (pl:rynna, rowek)</p>
+        </section>
+        <section class="definition">
+          <h2 class="light-pink-text center">How to apply 12 column grid for web devices?</h2>
+          <img src="img/grid-system-illustration.jpg" alt="grid illustration">
+        </section>
+        <section class="definition">
+          <h2 class="light-pink-text center">Grid div structure</h2>
+          <pre><code class="hljs html" data-trim data-line-numbers="1-12">
+   <div class="container">
+    <div class="row">
+        <div class="column">1</div>
+        <div class="column">1</div>
+        <div class="column">1</div>
+    </div>
+</div>
+          </code></pre>
+        </section>
+        <section class="definition">
+          <h3 class="light-pink-text center">Class name system for columns types</h3>
+          <ul>
+            <li>col: default</li>
+            <li>col-xs: extra small (mobile first pattern)</li>
+            <li>col-sm: small (desktop first pattern)</li>
+            <li>col-md: medium (laptops or medium monitors)</li>
+            <li>col-lg: large (desktop large monitor)</li>
+          </ul>
+        </section>
+        <section class="definition">
+          <p class="light-pink-text">For each columns types we can specify their width by adding to the base name some number.</p>
+          <img src="img/Rush-12-grid-thumb.png" alt="gride width defined" width="700">
+          <pre><code class="hljs html" data-trim data-line-numbers="1-12"><div class="col-6 col-xs-2"></div></code></pre>
+        </section>
+
+        <section class="definition">
+          <h3 class="light-pink-text center">They are only names of the classes selectors!</h3>
+         <p class="center">Now we need to fill all of them with values.</p>
+         <a href="https://codepen.io/jola95/pen/YzwodPO">Play with it in Codepan</a>
+        </section>
+
+        <section class="definition">
+          <h2 class="dark-pink-text center">CSS Special effects</h2>
+          <ul>
+            <li>Box shadows</li>
+            <li>Rounded corners</li>
+            <li>CSS Transform</li>
+            <li>CSS Transitions</li>
+            <li>CSS Animations</li>
+          </ul>
         </section>
 
 
-        <section class="code">
-          <h3 class="light-pink-text">Brown fox</h3>
-          <pre><code class="hljs html" data-trim data-line-numbers="2-4">
-				<?php
-				use PHPUnit\Framework\TestCase;
-
-				class StackTest extends TestCase
-				{
-					public function testPushAndPop()
-					{
-						$stack = [];
-						$this->assertSame(0, count($stack));
-
-						array_push($stack, 'foo');
-						$this->assertSame('foo', $stack[count($stack)-1]);
-						$this->assertSame(1, count($stack));
-
-						$this->assertSame('foo', array_pop($stack));
-						$this->assertSame(0, count($stack));
-					}
-				} 
-				?>
-				</code></pre>
-        </section>
         <section class="more-ridings">
           <h2 class="center">Więcej na teamt:</h2>
           <ol>
