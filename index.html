@@ -63,16 +63,17 @@
         </section>
         <section class="definition">
           <h2 class="dark-pink-text">History</h2>
-          <p class="">
-            CSS was first proposed by Håkon Wium Lie on October 10, 1994. At the
-            time, Lie was working with Tim Berners-Lee at CERN. Several other
-            style sheet languages for the web were proposed around the same
-            time, and discussions on public mailing lists and inside World Wide
-            Web Consortium resulted in the first W3C CSS Recommendation (CSS1)
-            being released in 1996. In particular, a proposal by Bert Bos was
-            influential; he became co-author of CSS1, and is regarded as
-            co-creator of CSS. (Wikipedia, 2020)
-          </p>
+          
+          <div class="flex">
+            <p class="">
+              CSS was first proposed by Håkon Wium Lie on October 10, 1994. At the
+              time and co-worker Bert Bos. The CSS specifications are maintained by the World Wide Web Consortium (W3C) <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">(Wikipedia, 2020).</a>
+            </p>
+            <img src="img/CSS3_logo_and_wordmark.svg.png" alt="css logo" width="750">
+            
+          </div>
+          <img src="img/w3c_evangelist.png" alt="w3c logo" width="350">  
+          
         </section>
         <section class="list">
           <h3 class="light-pink-text">Agenda:CSS Essentials</h3>
@@ -150,13 +151,11 @@
               Add
               <span>link</span>
               element to a header. In Header html keeps all information about
-              content of the page. Content of a page is in
-              <span>body</span>
-              element.
+              content of the page.
               <pre><code class="hljs html" data-trim data-line-numbers="2-4">
 								<link rel="stylesheet" href="css/main-style.css">
-						</code></pre>
-            </li>
+            </code></pre>
+                        </li>
             <li class="fragment">
               rel: relationship with stylesheet (type of file).
             </li>
@@ -164,81 +163,68 @@
           </ul>
         </section>
         <section class="definition">
-          <h2 class="dark-pink-text">CSS syntax</h2>
-          <ul>
-            <li>
-              CSS rule
-              <pre><code class="hljs css" data-trim data-line-numbers="2-4">
-					h1 {
-						color: green;
-					}
-			</code></pre>
-            </li>
-            <li>h1 - selector, which element to selector to set styling</li>
-            <li>color: property</li>
-            <li>orange: value of property</li>
-            <li>
-              { color: orange } - declaration. We can have as much declarations
-              as we want
-            </li>
-          </ul>
+          <h2 class="dark-pink-text center">CSS rule syntax</h2>
+          
+      <img src="img/unnamed.png" alt="css syntax">
+
+           <p class="fragment">We can have as much declarations as we want</p>
+           
         </section>
         <section class="definition">
           <h2 class="dark-pink-text">CSS Selectors</h2>
-          <ul>
-            <li>
-              Type (h1, a, div): name of elements, and it attached to all type
-              of element on the page. It is the most basic css selector
-            </li>
-            <li>
-              Descendant (div a {}): more appropriate selector. We can specify
-              elements, or its group by specified how they are nested - parent
-              and children relations.
-            </li>
-            <li>
-              Class: specified attributes. Reuse same style in many places.
-            </li>
-          </ul>
+          <pre><code class="hljs css" data-trim data-line-numbers="1-20">
+           h1, a, div {
+             /* Tags types selectors: it attached to all type
+             of element on the page. It is the most basic css selector */
+           }
+
+           div a {
+             /* Descendant selector: more appropriate selector. We can specify
+             elements, or its group by specified how they are nested - parent
+             and children relations. */
+           }
+
+          .className {
+            /* Class selector: more appropriate selector than defendant selector reuse same style in many places
+          }
+
+
+          #idName {
+            /* ID selector: most appropriate selector. Only inline style are more appropriate than id selectors.
+          }
+
+        </code></pre>
         </section>
         <section class="definition">
           <h2 class="dark-pink-text">cd. CSS Selectors</h2>
-          <ul>
-            <li>
-              Mix descendant and class selectors - depend from where some
-              element exist in html structure we can styled it in deferent ways.
-              <pre><code class="hljs css" data-trim data-line-numbers="2-4">
-						p {color: orange}
-						footer {color: green}
-						footer p {color: blue}
-				</code></pre>
-            </li>
-          </ul>
+          <p> Mix descendant and class selectors - depend from where some
+            element exist in html structure we can styled it in deferent ways.</p>
+            <pre><code class="hljs css" data-trim data-line-numbers="1-20">
+              .className {color: orange}
+              footer {color: green}
+              footer .className {color: blue}
+            </code>
         </section>
         <section class="definition">
-          <h2 class="dark-pink-text">Remember</h2>
-          <p>
-            descendent selectors are more specific, descendent elements are more
-            specified; class are more specific than descendant; class with
-            descendant are more specific than class. if element have two rules
-            with same specifically then the order of the rule are count.
-          </p>
+          <h2 class="dark-pink-text">Specificity</h2>
+          <img src="img/spec-03b.svg" alt="specificity">
+          <a href="https://codepen.io/jola95/pen/jOWgOJN">Practice in Codepan</a>
+
+          
         </section>
         <section class="definition">
-          <h2 class="dark-pink-text">The Cascade</h2>
+          <h2 class="dark-pink-text">Summing up Cascade</h2>
           <ul>
-            <li>
-              Cascade: like waterfall. Default style by browser. Adding new
+            <li class="fragment">
+              Cascade: like waterfall. Adding new
               stream in cascade rewrite default browser’s style.
             </li>
-            <li>
+            <li class="fragment">
               Inheritance: allow to set style from parent elements to children
-              element. Some value of property can’t be inherit, like color (more
-              about it later).
+              element.
             </li>
-            <li>
-              Specificity [specyficzność]: We can counting specificity for find
-              out which rules are attached to some element and influence how it
-              look like.
+            <li class="fragment">
+              Specificity [specyficzność]:We can count the specificity to find out what rules are assigned to an element and influence its appearance.
             </li>
           </ul>
         </section>
@@ -264,98 +250,54 @@
             mean to decorate, and manipulate boxes in any way that we can
             imagine
           </p>
-
-          <pre><code class="hljs css" data-trim data-line-numbers="2-4">
-							box-a {
-								background-color: orange;
-								padding: 30px;
-								padding-top;
-								padding-right;
-								padding-bottom;
-								padding-left;
-								border: 1px solid black;
-								margin: 20px
-							 }					 
-					</code></pre>
+          <img src="img/css-box-model-core.png" alt="box model">
         </section>
         <section class="definition">
-          <pre><code class="hljs css" data-trim data-line-numbers="2-4">
-							box-a {
+          <pre><code class="hljs css" data-trim data-line-numbers="1-20">
+							.box-a {
 								background-color: orange;
-								padding: 30px;
-								padding-top;
-								padding-right;
-								padding-bottom;
-								padding-left;
-								border: 1px solid black;
-								margin: 20px
+                padding: 30px; /* create space to inside of that box */
+                /* Full padding definition:
+								padding-top: 30px;
+								padding-right: 30px;
+								padding-bottom: 30px;
+                padding-left: 30px;
+                */
+								border: 1px solid black; /*  add outline on the outer edge of the box */
+								margin: 20px /* create space around outside of the box */
 							 }					 
-			</code></pre>
-          <ul>
-            <li>Box: area which take space on the webpage</li>
-            <li>Padding: create space to inside of that box</li>
-            <li>Border: add outline on the outer edge of the box</li>
-            <li>Margin: create space around outside of the box</li>
-          </ul>
+      </code></pre>
         </section>
         <section class="code">
           <h3 class="light-pink-text">
             How to control total width and height?
           </h3>
           <pre><code class="hljs css" data-trim data-line-numbers="1-4">
-					box-a {
+					.box-a {
 						width: 20px;
 						height: 20px;
 					 }					 
-				</code></pre>
+        </code></pre>
+        <p class="fragment">Use width and height properties.</p>
         </section>
         <section class="code">
-          <h3 class="light-pink-text">
-            Compare total widths
+          <h3 class="light-pink-text center">
+            Compare total widths and heights
           </h3>
-
-          <pre><code class="hljs css" data-trim data-line-numbers="1-10">
-				box-a {
+         
+          <pre><code class="hljs css" data-trim data-line-numbers="1-20">
+				.box-a {
 					width: 20px;
 					height: 20px;
 				 }
-				box-b {
+				.box-b {
 					width: 20px;
 					height: 20px;
 					padding: 20px;
 					border: 10px;
 				 }						 
-					</code></pre>
-          <p>
-            box-a = 20px;
-          </p>
-          <p>
-            box-b = 20px + 20px left padding + 20px right padding + 10px left
-            border + 10px right border = 60px
-          </p>
-        </section>
-        <section class="code">
-          <h3 class="light-pink-text">
-            Compare total heights
-          </h3>
-
-          <pre><code class="hljs css" data-trim data-line-numbers="1-10">
-				  box-a {
-					  width: 20px;
-					  height: 20px;
-				   }
-				  box-b {
-					  width: 20px;
-					  height: 20px;
-					  padding: 20px;
-					  border: 10px;
-				   }						 
-					  </code></pre>
-          <p>box-a = 20px;</p>
-          <p>
-            box-b = 20px + 20px top padding + 20px bottom padding + 10px top
-            border + 10px bottom border = 60px
-          </p>
+          </code></pre>
+          <a href="https://codepen.io/jola95/pen/KKVOwgz">Practice in Codepan</a>
         </section>
 
         <section class="desc">
@@ -870,6 +812,7 @@
           <img src="img/Screen Shot 2020-07-30 at 13.04.08.png" alt="developer tools">
         </section>
         <section class="definition">
+          <h3 class="light-pink-text center">Get in to Developer Tools</h3>
           <ul>
             <li>Go to the browser.</li>
             <li>Click on keyboard alt+ctrl+i or  on mack cmd+i.</li>
@@ -929,6 +872,11 @@
         </section>
         <section class="definition">
           <h3 class="light-pink-text center">Meta tags</h3>
+          <img src="img/Screen Shot 2020-07-31 at 12.54.46.png" alt="meta tags" >
+          <a href="https://www.wikitechy.com/step-by-step-html-tutorials/meta-tag-in-html">more info</a>
+        </section>
+        <section>
+          <h3 class="light-pink-text center">Responsive meta tags</h3>
           <pre><code class="hljs html" data-trim data-line-numbers="1-12">
             <html>
               <head>
@@ -939,8 +887,8 @@
               </head>
           </code></pre>
           <ul>
-            <li>name=”viewport”: It refer to web browser's window area, which is screen of user’s devises.</li>
-            <li>content=”width=device-width, initial-scale=1”: We want the browser window to function at the actual screen width and to be truthful, not pretend to be larger.
+            <li><strong>name=”viewport”</strong>: It refer to web browser's window area, which is screen of user’s devises.</li>
+            <li><strong>content=”width=device-width, initial-scale=1”</strong>: We want the browser window to function at the actual screen width and to be truthful, not pretend to be larger.
             </li>
           </ul>
         </section>
@@ -1021,6 +969,10 @@
             <li>CSS Transitions</li>
             <li>CSS Animations</li>
           </ul>
+        </section>
+        <section class="definition">
+          <h2 class="light-pink-text center">It is better to show than describe</h2>
+          <a href="https://codepen.io/jola95/pen/YzwmyJe">Go to Codepan</a>
         </section>
 
 
